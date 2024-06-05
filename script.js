@@ -2,22 +2,28 @@ const widths = [];
 const lengths = [];
 
 function sumarAncho() {
-    const width = parseFloat(document.getElementById("widthInput").value);
+    const widthInput = document.getElementById("widthInput");
+    const width = parseFloat(widthInput.value);
     widths.push(width);
     actualizarMedidas();
+    widthInput.value = ""; // Limpiar el campo de entrada después de ingresar la medida
 }
 
 function sumarLargo() {
-    const length = parseFloat(document.getElementById("lengthInput").value);
+    const lengthInput = document.getElementById("lengthInput");
+    const length = parseFloat(lengthInput.value);
     lengths.push(length);
     actualizarMedidas();
+    lengthInput.value = ""; // Limpiar el campo de entrada después de ingresar la medida
 }
 
 function actualizarMedidas() {
     const widthSum = widths.reduce((a, b) => a + b, 0);
     const lengthSum = lengths.reduce((a, b) => a + b, 0);
     const area = widthSum * lengthSum;
-    document.getElementById("result").innerText = "Medidas Generales del Terreno:\nAncho: " + widthSum.toFixed(2) + " metros\nLargo: " + lengthSum.toFixed(2) + " metros\nÁrea Total del Terreno: " + area.toFixed(2) + " metros cuadrados";
+    const resultElement = document.getElementById("result");
+    resultElement.innerText = "Medidas Generales del Terreno:\nAncho: " + widthSum.toFixed(2) + " metros\nLargo: " + lengthSum.toFixed(2) + " metros\nÁrea Total del Terreno: " + area.toFixed(2) + " metros cuadrados";
+    resultElement.style.display = "block"; // Mostrar la información del terreno
 }
 
 function calcularResultado() {
@@ -30,5 +36,12 @@ function calcularResultado() {
 
     const palmetas = Math.ceil(terrainArea / tileArea);
 
-    document.getElementById("result").innerText = "Necesitas comprar " + palmetas + " palmetas de pasto.";
+    const resultElement = document.getElementById("result");
+    resultElement.innerText = "Necesitas comprar " + palmetas + " palmetas de pasto.";
+    resultElement.style.display = "block"; // Mantener visible la información del terreno
 }
+
+function refreshApp() {
+    location.reload();
+}
+
