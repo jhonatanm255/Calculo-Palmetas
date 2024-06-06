@@ -55,3 +55,14 @@ button:hover {
 #result {
     margin-bottom: 10px;
 }
+
+.resultado {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.res {
+    margin: 0 0 5px 0;
+}
