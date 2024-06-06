@@ -13,29 +13,40 @@
         <!-- INFORMACION DEL TERRENO --> 
         <div class="area">
             <h5>Medidas del terreno en metros</h5>
-            <input type="number" id="widthInput" placeholder="Ancho">
-
-            <button onclick="sumarAncho()">Agregar Ancho</button>
-
-            <input type="number" id="lengthInput" placeholder="Largo">
-            <button onclick="sumarLargo()">Agregar Largo</button>
+            <div class="content-input">
+                <div>
+                    <input type="number" id="widthInput" placeholder="Ancho">
+                    <button onclick="sumarAncho()">Agregar Ancho</button>
+                </div>
+                <div>
+                    <input type="number" id="lengthInput" placeholder="Largo">
+                    <button onclick="sumarLargo()">Agregar Largo</button>
+                </div>
+                
+            </div>
+            
         </div>    
         
         <!-- INFORMACION DE LAS PALMETAS -->
         <div class="area">
             <h5>Medidas de la palmeta en metros</h5>
 
-            <input type="number" id="tileSizeWidth" placeholder="Ancho de la Palmeta">
-
-            <input type="number" id="tileSizeLength" placeholder="Largo de la Palmeta">
+            <div class="content-input">
+                <input type="number" id="tileSizeWidth" placeholder="Ancho de la Palmeta">
+                <input type="number" id="tileSizeLength" placeholder="Largo de la Palmeta">
+            </div>
+            
         </div>
         
         <!-- INFORMACION DEL TERRENO Y LAS PALMETAS EN METROS CUADRADOS -->
         <div class="area azul">
             <h5>Medidas del terreno y de la palmeta en metros cuadrados</h5>
 
-            <input type="number" id="terrainArea" placeholder="Área del Terreno en Metros Cuadrados">
-            <input type="number" id="tileArea" placeholder="Área de la Palmeta en Metros Cuadrados">
+            <div class="content-input">
+                <input type="number" id="terrainArea" placeholder="Área del Terreno en m2">
+            <input type="number" id="tileArea" placeholder="Área de la Palmeta en m2">
+            </div>
+            
         </div>
         
         <!-- BOTON DE RESULTADOS -->

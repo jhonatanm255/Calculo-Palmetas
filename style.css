@@ -5,7 +5,7 @@ body {
 .container {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: rgb(238, 237, 237);
@@ -16,6 +16,11 @@ body {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
+}
+
+.content-input {
+    display: flex;
+    gap: 10px;
 }
 
 input[type="number"], button {
