@@ -36,7 +36,7 @@ function calcularResultado() {
 
     const palmetas = Math.ceil(terrainArea / tileArea);
 
-    const resultElement = document.getElementById("result");
+    const resultElement = document.getElementById("result-1");
     resultElement.innerText = "Necesitas comprar " + palmetas + " palmetas de pasto.";
     resultElement.style.display = "block"; // Mantener visible la información del terreno
 }
